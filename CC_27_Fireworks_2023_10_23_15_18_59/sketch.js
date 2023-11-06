@@ -4,7 +4,7 @@
 
 const fireworks = [];
 let gravity;
-
+var paused = false;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
@@ -17,8 +17,10 @@ function setup() {
 function draw() {
   colorMode(RGB);
   background(0, 0, 0, 25);
-  
-  if (random(1) < 0.04) {
+  if (paused){
+
+  } else {
+    if (random(1) < 0.04) {
     fireworks.push(new Firework());
   }
   
@@ -30,4 +32,10 @@ function draw() {
       fireworks.splice(i, 1);
     }
   }
+  }
 }
+function keyPressed(){
+   if (key === 'p'){
+  paused = true;
+   } 
+  }
