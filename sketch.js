@@ -4,7 +4,7 @@
 
 const fireworks = [];
 let gravity;
-var paused = false;
+let paused = false;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
@@ -18,14 +18,14 @@ function draw() {
   colorMode(RGB);
   background(0, 0, 0, 25);
   if (paused){
-push()
+
 const middleX = width/2
 const middleY = height/2
 fill(255, 0, 0)
 textSize(100)
 textAlign(CENTER, CENTER);
 text('PAUSED', middleX, middleY);
-pop()
+
   } else {
     if (random(1) < 0.04) {
     fireworks.push(new Firework());
