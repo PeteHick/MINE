@@ -6,14 +6,14 @@ class Particle {
   constructor(x, y, hu, firework) {
     this.pos = createVector(x, y);
     this.firework = firework;
-    this.lifespan = 255;
+    this.lifespan = 270;
     this.hu = hu;
     this.acc = createVector(0, 0);
     if (this.firework) {
       this.vel = createVector(0, random(-12, -8));
     } else {
       this.vel = p5.Vector.random2D();
-      this.vel.mult(random(2, 10));
+      this.vel.mult(random(2, 13));
     }
   }
 
