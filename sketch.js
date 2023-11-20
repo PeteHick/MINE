@@ -25,11 +25,11 @@ fill(255, 0, 0);
 textSize(100);
 textAlign(CENTER, CENTER);
 text('PAUSED', middleX, middleY);
-rectAlign(CENTER);
 fill(180, 170, 50);
 stroke(0, 0, 255);
+rectAlign(CENTER);
 strokeWeight(5);
-rect(width /1.5, height /1.5);
+rect(width /1.5, height /1.5, 100, 50);
 
   } else {
     if (random(1) < 0.04) {
