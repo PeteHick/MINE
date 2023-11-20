@@ -27,7 +27,7 @@ textAlign(CENTER, CENTER);
 text('PAUSED', middleX, middleY);
 fill(180, 170, 50);
 stroke(0, 0, 255);
-rectAlign(CENTER);
+rectMode(CENTER);
 strokeWeight(5);
 rect(width /1.5, height /1.5, 100, 50);
 
