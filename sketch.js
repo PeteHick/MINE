@@ -31,8 +31,13 @@ fill(255, 0, 196);
 stroke(255, 255, 255);
 rectMode(CENTER);
 strokeWeight(3);
-rect(width / 2, height / 1.25, 250, 115);
-
+rect(width / 2, height / 1.5, 250, 115);
+stroke(25);
+strokeWeight(2);
+fill(60, 0, 60)
+textSize(60);
+textAlign(CENTER, CENTER);
+text('RESET', width / 2, height / 1.5);
   } else {
     if (random(1) < 0.04) {
     fireworks.push(new Firework());
