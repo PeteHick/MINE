@@ -21,15 +21,17 @@ function draw() {
 
 const middleX = width/2
 const middleY = height/2
-fill(255, 0, 0);
+stroke(255, 255, 255)
+strokeWeight(4)
+fill(0, 255, 205);
 textSize(100);
 textAlign(CENTER, CENTER);
 text('PAUSED', middleX, middleY);
-fill(180, 170, 50);
-stroke(0, 0, 255);
+fill(255, 0, 196);
+stroke(255, 255, 255);
 rectMode(CENTER);
-strokeWeight(5);
-rect(100, 100, 100, 50);
+strokeWeight(3);
+rect(400, 400, 225, 125);
 
   } else {
     if (random(1) < 0.04) {
