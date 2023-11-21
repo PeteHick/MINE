@@ -30,9 +30,8 @@ textAlign(CENTER, CENTER);
 text('PAUSED', middleX, middleY);
 fill(255, 0, 196);
 stroke(255, 255, 255);
-rectMode(CENTER);
 strokeWeight(3);
-rect(width / 2, height / 1.5, 250, 115);
+circle(width / 2, height / 1.25, 200);
 stroke(25);
 strokeWeight(2);
 fill(60, 0, 60)
