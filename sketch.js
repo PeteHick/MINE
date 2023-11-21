@@ -39,11 +39,17 @@ fill(60, 0, 60)
 textSize(60);
 textAlign(CENTER, CENTER);
 text('RESET', width / 2, height / 1.5);
-  } else {
-   if (reset) {
+function mouseClicked(){
+    if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 && mouseY > height / 1.5 - 57.5 && mouseY < height / 1.5 + 57.5){
+      reset = true;
+    }
+  }
+  if (reset) {
     clear();
     reset = false;
+    paused = false;
    }
+  } else {
     if (random(1) < 0.04) {
     fireworks.push(new Firework());
   }
@@ -63,8 +69,4 @@ function keyPressed(){
   paused = !paused
    } 
   }
-  function mouseClicked(){
-    if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 && mouseY > height / 1.5 - 57.5 && mouseY < height / 1.5 + 57.5){
-      reset = true;
-    }
-  }
+  
