@@ -31,13 +31,13 @@ text('PAUSED', middleX, middleY);
 fill(255, 0, 196);
 stroke(255, 255, 255);
 strokeWeight(3);
-circle(width / 2, height / 1.25, 200);
+circle(width / 2, height / 1.25, 140);
 stroke(25);
 strokeWeight(2);
 fill(60, 0, 60)
 textSize(60);
 textAlign(CENTER, CENTER);
-text('RESET', width / 2, height / 1.5);
+text('RESET', width / 2, height / 1.25);
 function mouseClicked(){
     if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 && mouseY > height / 1.5 - 57.5 && mouseY < height / 1.5 + 57.5){
       reset = true;
