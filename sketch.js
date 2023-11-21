@@ -44,7 +44,7 @@ function mouseClicked(){
       reset = true;
     }
   }
-  if (reset) {
+  if (reset === true) {
     clear();
     reset = false;
     paused = false;
