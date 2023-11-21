@@ -5,6 +5,7 @@
 const fireworks = [];
 let gravity;
 let paused = false;
+let reset = false;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
@@ -39,6 +40,10 @@ textSize(60);
 textAlign(CENTER, CENTER);
 text('RESET', width / 2, height / 1.5);
   } else {
+   if (reset) {
+    clear();
+    reset = false;
+   }
     if (random(1) < 0.04) {
     fireworks.push(new Firework());
   }
@@ -57,4 +62,9 @@ function keyPressed(){
    if (key === 'p'){
   paused = !paused
    } 
+  }
+  function mouseClicked(){
+    if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 && mouseY > height / 1.5 - 57.5 && mouseY < height / 1.5 + 57.5){
+      reset = true;
+    }
   }
