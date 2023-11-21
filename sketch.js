@@ -31,7 +31,7 @@ fill(255, 0, 196);
 stroke(255, 255, 255);
 rectMode(CENTER);
 strokeWeight(3);
-rect(400, 400, 225, 125);
+rect(width / 2, height / 1.25, 250, 115);
 
   } else {
     if (random(1) < 0.04) {
