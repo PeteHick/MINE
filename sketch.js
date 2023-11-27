@@ -4,10 +4,6 @@
 
 const fireworks = [];
 let gravity;
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-miniSetup();
-}
 function miniSetup(){
   colorMode(HSB);
   gravity = createVector(0, 0.15);
@@ -16,6 +12,10 @@ function miniSetup(){
   background(0);
   let reset = false;
   let paused = false;
+}
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  miniSetup();
 }
 function draw() {
   colorMode(RGB);
