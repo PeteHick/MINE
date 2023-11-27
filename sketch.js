@@ -20,7 +20,7 @@ function draw() {
   colorMode(RGB);
   background(0, 0, 0, 25);
   function mouseMoved(){
-    console.log('' ${mouseX} ' ' ${mouseY})
+    console.log(mouseX && mouseY);
   };
   if (paused){
 
