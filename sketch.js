@@ -6,6 +6,7 @@ const fireworks = [];
 let gravity;
 function setup() {
   createCanvas(windowWidth, windowHeight);
+miniSetup();
 }
 function miniSetup(){
   colorMode(HSB);
