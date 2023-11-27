@@ -18,6 +18,9 @@ function setup() {
 function draw() {
   colorMode(RGB);
   background(0, 0, 0, 25);
+  function mouseMoved(){
+    console.log('' ${mouseX} ' ' ${mouseY})
+  };
   if (paused){
 
 const middleX = width/2
@@ -30,16 +33,19 @@ textAlign(CENTER, CENTER);
 text('PAUSED', middleX, middleY);
 fill(255, 0, 196);
 stroke(255, 255, 255);
+rectAllign(CENTER);
 strokeWeight(3);
-circle(width / 2, height / 1.25, 140);
+rect(width / 2, height / 1.5, 225, 120);
 stroke(25);
 strokeWeight(2);
 fill(60, 0, 60)
 textSize(60);
 textAlign(CENTER, CENTER);
-text('RESET', width / 2, height / 1.25);
+text('RESET', width / 2, height / 1.3);
+
 function mouseClicked(){
-    if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 && mouseY > height / 1.5 - 57.5 && mouseY < height / 1.5 + 57.5){
+    var d = dist()
+  if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 && mouseY > height / 1.5 - 57.5 && mouseY < height / 1.5 + 57.5){
       reset = true;
     }
   }
