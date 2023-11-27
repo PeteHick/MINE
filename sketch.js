@@ -4,17 +4,18 @@
 
 const fireworks = [];
 let gravity;
-let paused = false;
-let reset = false;
 function setup() {
   createCanvas(windowWidth, windowHeight);
+}
+function miniSetup(){
   colorMode(HSB);
   gravity = createVector(0, 0.15);
   stroke(255);
   strokeWeight(4);
   background(0);
+  let reset = false;
+  let paused = false;
 }
-
 function draw() {
   colorMode(RGB);
   background(0, 0, 0, 25);
@@ -42,17 +43,18 @@ fill(60, 0, 60)
 textSize(60);
 textAlign(CENTER, CENTER);
 text('RESET', width / 2, height / 1.3);
-
+let resetX = width / 2 - 125;
+let resetY = height / 1.5 - 57.5;
+let resetLength = 250;
+let resetHeight = 125;
 function mouseClicked(){
     var d = dist()
-  if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 && mouseY > height / 1.5 - 57.5 && mouseY < height / 1.5 + 57.5){
+  if (paused && mouseX > resetX && mouseX < (resetX + resetLength) && mouseY > resetY && mouseY < (resetY + resetHeight)){
       reset = true;
     }
   }
   if (reset === true) {
-    clear();
-    reset = false;
-    paused = false;
+    miniSetup();
    }
   } else {
     if (random(1) < 0.04) {
