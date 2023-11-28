@@ -4,7 +4,7 @@
 
 const fireworks = [];
 let gravity;
-let paused;
+let pause;
 let reset;
 function miniSetup() {
   colorMode(HSB);
@@ -17,7 +17,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 miniSetup();
 reset = false;
-paused = false;
+pause = false;
 };
 function draw() {
   colorMode(RGB);
@@ -25,7 +25,7 @@ function draw() {
   function mouseMoved(){
     console.log('' + mouseX + ' ' + mouseY);
   };
-  if (paused){
+  if (pause){
 
 const middleX = width/2
 const middleY = height/2
@@ -76,7 +76,7 @@ function mouseClicked(){
 }
 function keyPressed(){
    if (key === 'p'){
-  paused = !paused
+  pause = !pause
    } 
   }
   
