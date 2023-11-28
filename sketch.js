@@ -4,15 +4,15 @@
 
 const fireworks = [];
 let gravity;
-let reset = false;
-let paused = false;
+
 function miniSetup() {
   colorMode(HSB);
   gravity = createVector(0, 0.15);
   stroke(255);
   strokeWeight(4);
   background(0);
-  
+  let reset = false;
+let paused = false;
 };
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -22,7 +22,7 @@ function draw() {
   colorMode(RGB);
   background(0, 0, 0, 25);
   function mouseMoved(){
-    console.log(mouseX && mouseY);
+    console.log('' + mouseX + ' ' + mouseY);
   };
   if (paused){
 
