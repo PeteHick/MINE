@@ -12,12 +12,12 @@ function miniSetup() {
   stroke(255);
   strokeWeight(4);
   background(0);
-  reset = false;
- paused = false;
 };
 function setup() {
   createCanvas(windowWidth, windowHeight);
 miniSetup();
+reset = false;
+paused = false;
 };
 function draw() {
   colorMode(RGB);
@@ -57,7 +57,7 @@ function mouseClicked(){
     }
   }
   if (reset === true) {
-    miniSetup();
+    Setup();
    }
   } else {
     if (random(1) < 0.04) {
