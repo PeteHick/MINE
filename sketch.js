@@ -4,7 +4,7 @@
 
 const fireworks = [];
 let gravity;
-let pause;
+let paused;
 let reset;
 let resetX;
 let resetY;
@@ -27,7 +27,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   miniSetup();
   reset = false;
-  pause = false;
+  paused = false;
 }
 
 function draw() {
@@ -54,9 +54,7 @@ function draw() {
     textAlign(CENTER, CENTER);
     text('RESET', width / 2, height / 1.3);
     
-    if (reset === true) {
-      setup();
-     }
+    
   } else {
     if (random(1) < 0.04) {
       fireworks.push(new Firework());
@@ -78,13 +76,13 @@ function mouseMoved(){
 
 function mouseClicked(){
   var d = dist(mouseX, mouseY, resetX, resetY);
-  if (pause && mouseX > resetX && mouseX < (resetX + resetLength) && mouseY > resetY && mouseY < (resetY + resetHeight)){
-      reset = true;
+  if (paused && mouseX > resetX && mouseX < (resetX + resetLength) && mouseY > resetY && mouseY < (resetY + resetHeight)){
+      miniSetup;
     }
 }
 
 function keyPressed() {
   if (key === 'p') {
-    pause = !pause
+    paused = !paused
  } 
 }
