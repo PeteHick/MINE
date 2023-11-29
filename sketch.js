@@ -53,7 +53,7 @@ function draw() {
     fill(60, 0, 60)
     textSize(60);
     textAlign(CENTER, CENTER);
-    text('RESET', width / 2, height / 1.3);
+    text('RESET', width / 2, height / 1.5);
     
     
   } else {
@@ -78,7 +78,7 @@ function mouseMoved(){
 function mouseClicked(){
   var d = dist(mouseX, mouseY, resetX, resetY);
   if (paused && mouseX > resetX && mouseX < (resetX + resetLength) && mouseY > resetY && mouseY < (resetY + resetHeight)){
-      miniSetup;
+      miniSetup();
     }
 }
 
