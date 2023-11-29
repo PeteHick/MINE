@@ -21,19 +21,20 @@ function miniSetup() {
   stroke(255);
   strokeWeight(4);
   background(0);
+  reset = false;
+  paused = false;
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   miniSetup();
-  reset = false;
-  paused = false;
+  
 }
 
 function draw() {
   colorMode(RGB);
   background(0, 0, 0, 25);
-  if (pause) {
+  if (paused) {
     const middleX = width/2
     const middleY = height/2
     stroke(255, 255, 255)
