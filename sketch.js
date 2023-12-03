@@ -10,7 +10,9 @@ let resetX;
 let resetY;
 let resetLength;
 let resetHeight;
-
+let r;
+let g;
+let b;
 function miniSetup() {
   colorMode(HSB);
   gravity = createVector(0, 0.15);
@@ -23,6 +25,9 @@ function miniSetup() {
   background(0);
   reset = false;
   paused = false;
+  r = 10;
+  g = 60;
+  b = 0;
 }
 
 function setup() {
@@ -57,6 +62,8 @@ function draw() {
     
     
   } else {
+
+    stroke(r, g, b);
     if (random(1) < 0.04) {
       fireworks.push(new Firework());
     }
@@ -74,7 +81,17 @@ function draw() {
 function mouseMoved(){
   console.log('' + mouseX + ' ' + mouseY);
 }
-
+function mouseClicked(){
+if (r < 255 && g < 255 && b < 255){
+  r = 10;
+  g = 60;
+  b = 0;
+} else {
+  r += 30;
+  g += 10;
+  b += 40;
+}
+}
 function mouseClicked(){
   var d = dist(mouseX, mouseY, resetX, resetY);
   if (paused && mouseX > resetX && mouseX < (resetX + resetLength) && mouseY > resetY && mouseY < (resetY + resetHeight)){
