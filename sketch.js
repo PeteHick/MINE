@@ -65,7 +65,7 @@ function draw() {
 
     stroke(r, g, b);
     if (random(1) < 0.04) {
-      fireworks.push(new firework());
+      fireworks.push(new Firework());
     }
     for (let i = fireworks.length - 1; i >= 0; i--) {
       fireworks[i].update();
