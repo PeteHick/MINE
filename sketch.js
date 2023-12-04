@@ -95,7 +95,7 @@ if (r < 255 && g < 255 && b < 255){
 function mouseClicked(){
   var d = dist(mouseX, mouseY, resetX, resetY);
   if (paused && mouseX > resetX && mouseX < (resetX + resetLength) && mouseY > resetY && mouseY < (resetY + resetHeight)){
-      miniSetup();
+      setup();
     }
 }
 
