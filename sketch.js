@@ -2,7 +2,7 @@
 // http://codingtra.in
 // https://youtu.be/CKeyIbT3vXI
 
-const fireworks = [];
+let fireworks;
 let gravity;
 let paused;
 let reset;
@@ -15,6 +15,7 @@ let g;
 let b;
 function miniSetup() {
   colorMode(HSB);
+  fireworks = [];
   gravity = createVector(0, 0.15);
   resetX = width / 2 - 125;
   resetY = height / 1.5 - 57.5; 
