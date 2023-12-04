@@ -58,7 +58,7 @@ function draw() {
     fill(60, 0, 60)
     textSize(60);
     textAlign(CENTER, CENTER);
-    text('RESET', width / 2, height / 1.5);
+    text('RESET', width / 2, height / 1.5)
     
     
   } else {
