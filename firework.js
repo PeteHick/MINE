@@ -58,7 +58,7 @@ class Firework {
 }
 function mouseClicked(){
   if (this.hu < 360){
-    this.hu = 0:
+    this.hu = 0;
   } else {
     this.hu += 10;
   }
