@@ -98,6 +98,9 @@ function mouseClicked(){
   if (paused && mouseX > resetX && mouseX < (resetX + resetLength) && mouseY > resetY && mouseY < (resetY + resetHeight)){
       setup();
     }
+    for (let i = fireworks.length - 1; i >= 0; i--) {
+      fireworks[i].updateColor();
+    }
 }
 
 function keyPressed() {

@@ -38,7 +38,15 @@ class Firework {
       }
     }
   }
-
+  updateColor() {
+    this.hu = (this.hu + random(360)) % 360;
+    
+    console.log("new hu: " + this.hu);
+    this.firework.hu = this.hu
+    for (let i = this.particles.length - 1; i >= 0; i--) {
+      this.particles[i].updateColor(this.hu);
+    }
+  }
   explode() {
     for (let i = 0; i < 185; i++) {
       const p = new Particle(this.firework.pos.x, this.firework.pos.y, this.hu, false);
