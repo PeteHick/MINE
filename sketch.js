@@ -106,5 +106,9 @@ function mouseClicked(){
 function keyPressed() {
   if (key === 'p') {
     paused = !paused
- } 
+ } else if (key === ' ') {
+  for (let i = fireworks.length - 1; i >= 0; i--) {
+   fireworks[i].updateExplosionVelocity();
+  }
+}
 }

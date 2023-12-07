@@ -15,6 +15,7 @@ class Particle {
       this.vel = p5.Vector.random2D();
       this.vel.mult(random(2, 13));
     }
+    this.explosionVelocity = 0.9;
   }
 
   applyForce(force) {
@@ -23,7 +24,7 @@ class Particle {
 
   update() {
     if (!this.firework) {
-      this.vel.mult(0.9);
+      this.vel.mult(this.explosionVelocity);
       this.lifespan -= 4;
     }
     this.vel.add(this.acc);

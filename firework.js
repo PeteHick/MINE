@@ -47,6 +47,11 @@ class Firework {
       this.particles[i].hu = this.hu;
     }
   }
+  updateExplosionVelocity() {
+    for (let i = this.particles.length - 1; i >= 0; i--) {
+      this.particles[i].explosionVelocity = 1.04;
+    }
+  }
   explode() {
     for (let i = 0; i < 185; i++) {
       const p = new Particle(this.firework.pos.x, this.firework.pos.y, this.hu, false);
