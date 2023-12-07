@@ -44,7 +44,7 @@ class Firework {
     console.log("new hu: " + this.hu);
     this.firework.hu = this.hu
     for (let i = this.particles.length - 1; i >= 0; i--) {
-      this.particles[i].updateColor(this.hu);
+      this.particles[i].hu = this.hu;
     }
   }
   explode() {
