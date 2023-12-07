@@ -43,20 +43,20 @@ function draw() {
   if (paused) {
     const middleX = width/2
     const middleY = height/2
-    stroke(255, 255, 255)
+    stroke(100, 100, 100)
     strokeWeight(4)
-    fill(0, 255, 205);
+    fill(255, 255, 255);
     textSize(100);
     textAlign(CENTER, CENTER);
     text('PAUSED', middleX, middleY);
-    fill(255, 0, 196);
-    stroke(255, 255, 255);
+    fill(255, 255, 255);
+    stroke(100, 100, 100);
     rectMode(CENTER);
     strokeWeight(3);
     rect(width / 2, height / 1.5, 225, 120);
-    stroke(25);
+    stroke(0, 0, 0);
     strokeWeight(2);
-    fill(60, 0, 60)
+    fill(0, 0, 0)
     textSize(60);
     textAlign(CENTER, CENTER);
     text('RESET', width / 2, height / 1.5);
